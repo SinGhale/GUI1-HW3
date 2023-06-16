@@ -1,1 +1,122 @@
+/*
+ File: style.css
+ Assignment: Interactive Dynamic Multiplication Table
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 15, 2023 at 10:00 PM
+ Brief Overview: This interactive multiplication table dynamically generates based on user input, utilizing the power of JavaScript.
+ Sources of Help: w3school, Class Notes, and Mdn Web Docs. 
+*/
 
+body{
+  background-color: pink;             
+}
+
+/* Main heading style */
+h1 {
+	color: #fbfbfb;
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 1px 1px #000000;
+}
+
+/* Subheading style */
+h2 {
+	color: #3e3e3e;
+	font-weight: bold;
+	margin-bottom: -1px;
+	font-variant-caps: petite-caps;
+	font-size: 30px
+}
+
+/* Margin for paragraphs */
+p {
+	margin-bottom: 30px;
+}
+
+
+/*Error Messages styles */
+#ErrorMessage {
+  text-align: center;
+	background-color: #EA8A95;
+	border: 0;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+	font-weight: bold;
+  font-size: 20px;
+  margin-bottom: -2px;
+  letter-spacing: 2px
+}
+
+/* General Output Message styles */
+#ErrorOutput{
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Styles for form elements */
+#form fieldset {
+    border: 1px dashed #3e3e3e;
+    margin-bottom: 50px;
+    padding: 20px 20px;
+}
+
+/* Styles for form legends */
+#form legend {
+    font-weight: bold;
+		color: rgb(53, 41, 121);
+}
+
+/* Margin doe number inputs in forms */
+#form input[type='number'] {
+    margin-right: 20px;
+}
+
+/*button stying*/
+#form input[type='button'] {
+    background-color: #3e3e3e;
+    border: 0;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+		position: relative;
+		left:40%;
+		border-radius: 12px;
+}
+
+/* Button style while in active state */
+#form input[type='button']:active {
+    background-color: #000000;
+}
+
+/* Multiplication table styles */
+.tContainer {
+    border-collapse: collapse;
+    max-height: 100vh;
+    outline: 1px solid #000000;
+    overflow: auto;
+		margin-bottom: 50px;
+    padding: 20px 20px;
+		font-size: 18px;
+		padding-left: 1%;
+}
+
+/* First row of multiplication table styles */
+#mtRow:first-child{
+  background-color: #050505;
+  color: white;
+}
+
+/* First column of multiplication table styles */
+#mtCellC{
+  background-color: #050505;
+  color: white;
+}
+
+/* Odd-numbered cells in Multiplication table stles */
+#mtCellG:nth-child(odd){
+  background-color: rgb(52, 202, 85);
+  color: white;
+}
