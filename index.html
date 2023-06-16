@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+ File: index.html
+ Assignment: Interactive Dynamic Multiplication Table
+ Sindhuja Ghale, UMass Lowell Computer Science, Sindhuja_Ghale@student.uml.edu
+ Copyright (c) 2023 by Sindhuja Ghale. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by SG on June 15, 2023 at 10:00 PM
+ Brief Overview: This interactive multiplication table dynamically generates based on user input, utilizing the power of JavaScript.
+ Sources of Help: w3school, Class Notes, and Mdn Web Docs. 
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HW3</title>
+    <!--Linking CSS file-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 class="header">Multiplication Table</h1>
+    <!-- Instructions for the user -->
+    <p id="direction-text">
+      <h2>Rules:</h2>
+      <br>Please note, the form does not accept the following.
+      <ol>
+        <li>Letters</li>
+        <li>Integers greater than 50</li>
+        <li>Integers less than -50</li>
+        <li>Make sure that the integer in the minimum column is always less than or equal to the integer in the maximum column.</li>
+        <li>When entered decimals as input, it will be rounded to the nearest whole number.</li>
+      </ol>
+    </p>
+    
+    <!-- Form to input range values -->
+    <form id="form">
+      <fieldset>
+        <legend>Horizontal (Multiplier)</legend>
+        <label for="multiplierMin">Minimum</label>
+        <input type="number" id="minHorizontal" name="minHorizontal" required>
+
+        <label for="multiplierMax">Maximum</label>
+        <input type="number" id="maxHorizontal" name="maxHorizontal" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Vertical (Multiplicand)</legend>
+        <label for="multiplicandMin">Minimum</label>
+        <input type="number" id="minVertical" name="minVertical" required>
+
+        <label for="multiplicandMax">Maximum</label>
+        <input type="number" id="maxVertical" name="maxVertical" required>
+      </fieldset>
+
+      <input type="button" value="Generate Multiplication Table" onclick="generate_multitable()">
+    </form>
+    
+    <!-- Error messages section -->
+    <p id="ErrorMessage"></p>
+    <p id="ErrorOutput"></p>
+    
+    <!--To display the multiplication table -->
+    <div id="container"></div>
+    
+    <!-- JavaScript file -->
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
